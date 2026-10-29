@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "id": "io.github.cesarfilho.kbd-backlight",
-  "name": "Keyboard Backlight",
+  "name": "Keyboard Backlight RGB",
   "version": "0.1.0",
   "author": "cesarfilho",
   "license": "MIT",
-  "description": "Keyboard backlight control for the bar: click toggles, scroll changes brightness, right click cycles colors. Optionally follows the theme accent.",
+  "description": "Control your Clevo laptop keyboard backlight from the bar: toggle, dim, change color, and sync with your theme accent.",
   "kinds": ["bar-widget"],
   "entryPoints": { "barWidget": "BarWidget.qml" },
   "barWidget": {
-    "displayName": "Keyboard Backlight",
+    "displayName": "Keyboard Backlight RGB",
     "description": "Toggle and dim the keyboard backlight, cycle its color.",
     "category": "Hardware",
     "allowMultiple": false,
