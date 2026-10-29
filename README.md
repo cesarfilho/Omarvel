@@ -1,5 +1,7 @@
 # Keyboard Backlight RGB
 
+![The widget in the bar](preview.png)
+
 Omarchy bar widget for the keyboard backlight of Clevo/Tongfen laptops
 (for example Avell). It controls the `rgb:kbd_backlight` LED.
 
