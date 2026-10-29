@@ -1,0 +1,1 @@
+ACTION=="add|change", SUBSYSTEM=="leds", KERNEL=="rgb:kbd_backlight", RUN+="/bin/sh -c 'chgrp input /sys%p/multi_intensity; chmod g+w /sys%p/multi_intensity'"
