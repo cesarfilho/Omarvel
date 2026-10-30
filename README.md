@@ -5,10 +5,15 @@
 Omarchy bar widget for the keyboard backlight of Clevo/Tongfen laptops
 (for example Avell). It controls the `rgb:kbd_backlight` LED.
 
-- Left click: toggle the backlight on and off.
+- Left click: open the control panel. Use its power button to toggle the backlight.
 - Scroll: change the brightness.
-- Right click: cycle through six colors.
+- Right click: cycle through six colors, starting from the active preset when possible.
+- Control panel: set brightness with a slider, choose a color preset, enter any `#RRGGBB` color, or apply the current theme accent.
+- Save up to eight favorite colors for quick access; favorites persist in the user's XDG state directory.
+- Escape or click outside the panel to close it. Arrow keys move between controls; Enter or Space activates the selected control.
 - Optional hook: paint the keyboard with the theme accent color on every theme change.
+
+The panel reports when the keyboard LED is unavailable and shows a permission hint if a color write fails. UI transitions provide feedback; animated effects on the physical keyboard depend on driver and device support and are not provided by this plugin.
 
 ## Requirements
 
@@ -56,9 +61,10 @@ if nothing else needs it.
 
 ## Helper
 
-`kbd.sh` does the work and can be used on its own:
+`kbd.sh` does the hardware work and can be used on its own:
 
     kbd.sh status | toggle | step +10 | step -10 | brightness 50 | color '#0a84ff' | theme
+    kbd.sh favorite list | add '#0a84ff' | remove '#0a84ff'
 
 ## License
 

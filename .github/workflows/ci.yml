@@ -28,7 +28,7 @@ jobs:
           test -f "$(jq -r .entryPoints.barWidget manifest.json)"
 
       - name: Required files
-        run: test -f LICENSE && grep -qiE '^#+ *install' README.md && grep -qiE '^#+ *remove' README.md
+        run: test -f LICENSE && test -f Panel.qml && grep -qiE '^#+ *install' README.md && grep -qiE '^#+ *remove' README.md
 
       - name: No symlinks
         run: test -z "$(find . -path ./.git -prune -o -type l -print)"
